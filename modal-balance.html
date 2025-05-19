@@ -1,0 +1,153 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/modal_deposit.css" />
+    <script src="./js/game.js" defer></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="modal-balance-overlay" class="modal-overlay hidden">
+        <div class="modal">
+          <div class="modal-tabs-wrap">
+  
+            <div class="tabs ">
+              <button class="tab active" id="tab1"><img src="./assets/icon/up.png" class="modal__overlay__tabs-icon">
+                Депозит</button>
+                <button class="tab" id="tab2">Выплата</button>
+                <button class="tab" id="tab3">История</button>
+              </div>
+              <img id="modal-tabs-cross" src="./assets/icon/crossvek.png" alt="">
+            </div>
+  
+          <div id="depositModalSubtabs" class="subtabs">
+            <span class="subtab active">Все</span>
+            <span class="subtab">Карта</span>
+            <span class="subtab">Электронный кошелек</span>
+            <span id="crypto-subtab" class="subtab unactive">Криптовалюта</span>
+          </div>
+          <div class="modal__switch-html-deposit" id="modal-switch">
+  
+            <div class="section">
+              <label>Карта</label>
+              <div class="input-row">
+                <div class="input-box"></div>
+                <div class="input-box"></div>
+              </div>
+            </div>
+  
+            <div class="section">
+              <label>Электронный кошелек</label>
+              <div class="input-box large"></Input></div>
+            </div>
+  
+            <div class="modal__deposit__helpButton-wrap">
+  
+              <button class="bottom-button">Не нашли платежную систему?</button>
+            </div>
+          </div>
+          <div id="modal-withdraw-body" class="modal__switch-html-withdraw hidden">
+            <div class="section">
+              <label>Карта</label>
+              <div class="input-row">
+                <div class="input-box"></div>
+                <div class="input-box"></div>
+                <div class="input-box"></div>
+              </div>
+            </div>
+            <div class="section">
+              <label>Электронный кошелек</label>
+              <div class="input-box large"></div>
+            </div>
+  
+            <div class="section">
+              <label>Криптовалюта</label>
+              <div class="crypto-grid">
+                <div class="input-box crypto"></div>
+                <div class="input-box crypto"></div>
+                <div class="input-box crypto selected"></div>
+                <div class="input-box crypto"></div>
+                <div class="input-box crypto"></div>
+              </div>
+            </div>
+            <div class="modal__deposit__helpButton-wrap">
+              <button class="bottom-button">Не нашли платежную систему?</button>
+            </div>
+          </div>
+          <div id="modal-history-body" class="modal__switch-html-history hidden">
+            <table class="history-table">
+              <thead>
+                <tr class="history-table-headers">
+                  <th>Тип</th>
+                  <th>ID</th>
+                  <th>Дата</th>
+                  <th>Сумма</th>
+                  <th>Система</th>
+                  <th>Статус</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><button class="type-button"><span>↑</span> Депозит</button></td>
+                  <td>VBHAEu8084</td>
+                  <td>2025-01-14 23:24:24</td>
+                  <td>+2 USD</td>
+                  <td>Система</td>
+                  <td>Не оплачен</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      <div id="depositWindow" class="modal-sepoit-window-open hidden">
+  
+      <div class="modal-header">
+        <div class="back__button-wrap">
+          
+          <button id="back-button1" class="back-button"><img src="./assets/icon/arrowleft.png" alt="">Депозит</button>
+          
+        </div>
+        <button class="close-button"><img src="./assets/icon/crossvek.png" alt=""></button>
+      </div>
+      
+      <div class="modal-content">
+        <div class="left-panel">лого платежки</div>
+        
+        <div class="right-panel">
+          <div class="top-text">Пополнение</div>
+          
+          <div class="input-group">
+            <div class="input-group-wrap">
+              
+              <input id="deposit-window-input" type="number" placeholder="Сумма платежа" />
+              <span class="currency">RUB</span>
+            <div class="min-label">Минимум 500 RUB</div>
+          </div>
+        </div>
+        <div class="amount-buttons-wrap">
+  
+          <div class="amount-buttons">
+            <button id="button500">500</button>
+            <button id="button1500">1500</button>
+            <button id="button2500">2500</button>
+            <button id="button5000">5000</button>
+          </div>
+        </div>
+        
+        <div class="deposit-window-button-wrap">
+          <div class="modal__deposit__button-container">
+            <div class="modal__deposit__button-shadow-bgc-correct"></div>
+            <div class="modal__deposit__button-shadow"></div>
+            <div class="modal__deposit__button-shadow-bgc"></div>
+            <button id="modalButton" class="modal__deposit__button-signin ">Пополнить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+</div>
+
+
+  </body>
+</html>

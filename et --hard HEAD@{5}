@@ -1,0 +1,29 @@
+[33m76ef688[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mvane4ik[m[33m)[m HEAD@{0}: merge origin/test-merge: Merge made by the 'ort' strategy.
+[33mb46529d[m[33m ([m[1;31morigin/vane4ik[m[33m)[m HEAD@{1}: checkout: moving from b46529dbebcd9a7f0091824f1f00e6f0f8aa80b0 to vane4ik
+[33mb46529d[m[33m ([m[1;31morigin/vane4ik[m[33m)[m HEAD@{2}: checkout: moving from 862c0515ea190bca4ede885813510d068610e62c to origin/vane4ik
+[33m862c051[m[33m ([m[1;31morigin/tymofii-branch[m[33m, [m[1;31morigin/test-merge[m[33m)[m HEAD@{3}: checkout: moving from test-merge to origin/test-merge
+[33mdf3d761[m[33m ([m[1;32mtest-merge[m[33m)[m HEAD@{4}: checkout: moving from vane4ik to test-merge
+[33mb46529d[m[33m ([m[1;31morigin/vane4ik[m[33m)[m HEAD@{5}: commit: adaptive for historPprofile and fixed bags
+[33m8b8ee2e[m HEAD@{6}: commit: all verstka!!!)))
+[33m51b6f4b[m HEAD@{7}: commit: all bags fixed
+[33m4f4ffee[m HEAD@{8}: commit: all pages of profile
+[33me40065e[m HEAD@{9}: commit: pages settings of profile
+[33m662ab2e[m HEAD@{10}: commit: dobavil vertku page_promokody of nav profile
+[33m7215f02[m HEAD@{11}: commit: 10lvls + balance_page_of_nav
+[33md539b1c[m HEAD@{12}: commit (merge): commiting
+[33m4984e5e[m HEAD@{13}: commit: rapapapm
+[33mecb4df2[m HEAD@{14}: commit: profile lvl 6 last 08.05.2025
+[33mcd3ddfb[m HEAD@{15}: commit: 04.05.25 dev lvl prof no-end
+[33m15a28e3[m HEAD@{16}: merge origin/tymofii-branch: Fast-forward
+[33ma88bd18[m HEAD@{17}: reset: moving to vane4ik
+[33ma88bd18[m HEAD@{18}: commit: 04.05.25
+[33mca9c745[m HEAD@{19}: commit: 04.05.2025
+[33md4d2053[m HEAD@{20}: commit: 28.04
+[33mda19ea7[m HEAD@{21}: commit: 26.04
+[33mdf3d761[m[33m ([m[1;32mtest-merge[m[33m)[m HEAD@{22}: merge test-merge: Fast-forward
+[33m702f35d[m HEAD@{23}: checkout: moving from test-merge to vane4ik
+[33mdf3d761[m[33m ([m[1;32mtest-merge[m[33m)[m HEAD@{24}: pull: Fast-forward
+[33m9e91aea[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{25}: checkout: moving from vane4ik to test-merge
+[33m702f35d[m HEAD@{26}: commit: microupd
+[33m9e91aea[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{27}: checkout: moving from main to vane4ik
+[33m9e91aea[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{28}: clone: from https://github.com/Van1k-lol/rutor

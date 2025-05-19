@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutor Casino</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/bonuses.css">
+  <script src="./js/bonuses.js" defer></script>
+  <script src="./script/sript.js" defer></script>
+
+</head>
+
+<body>
+  <div class="background">
+    <img src="./assets/img/main/main/bg_main.jpg" alt="">
+  </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="wrap header__wrap">
+      <div class="balance">5 000$ + 250FS</div>
+      <div class="logo">
+        <a href="index.html" class="logo__link">
+          <img src="./assets/img/main/main_top/logo.png" alt="logo" class="logo__img">
+        </a>
+      </div>
+      <div class="auth_container">
+        <div class="buttons">
+          <button class="login">
+            <span>
+              <i>Вход</i>
+            </span>
+          </button>
+          <button class="registration"><span>
+              <i>Регистрация</i>
+            </span>
+          </button>
+          <select class="language">
+            <option>RU</option>
+            <option>EN</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+    <div class="modal__login">
+    <div class="modal__main">
+      <div class="modal__button-close"><img src="./assets/img/main/main_reg/Vector.png" class="modal__button--img"
+          alt=""></div>
+      <div class="main__wrap">
+        <picture class="modal__add"><source srcset="./assets/banner/Banner.png" media="(max-width: 425px)"><img src="./assets/img/main/main_reg/Frame 16.png" alt=""></picture>
+        <div class="modal__forms">
+          <div class="modal__forms__top">
+            <h2 class="modal__text-auth">Авторизация</h2>
+          </div>
+          <div class="modal__forms__container">
+            <div class="modal__forms__inputs">
+              <input placeholder="Почта" type="email" id="modal-login-email" class="modal__input-email">
+              <div class="modal__input--wrapper">
+
+                <input placeholder="Пароль" id="password2" type="password" class="modal__input-password">
+                <button class="modal__input--toggle" type="button" onclick="togglePassword2()"><img id="password2-img"
+                    src="./assets/img/main/main_reg/eye-1.png" alt=""></button>
+              </div>
+              <div class="modal__forms__inputs--reset">
+                <p>Забыли пароль?</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal__forms__button--auth">
+            <div id="modBtnContainer" class="modal__button-container">
+              <div class="modal__button-shadow-bgc-correct"></div>
+              <div class="modal__button-shadow"></div>
+              <div class="modal__button-shadow-bgc"></div>
+              <button id="modalButtonSign" class="modal__button-signin">Вход</button>
+            </div>
+            <p class="modal__forms__or-text">или</p>
+            <div class="modal__button-container">
+              <div class="modal__button__telegram-shadow"></div>
+              <button class="modal__button__telegram-signin">Вход через Telegram</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal__register">
+    <div class="modal__main">
+      <div class="modal__button-close"><img src="./assets/img/main/main_reg/Vector.png" class="modal__button--img1"
+          alt=""></div>
+      <div class="main__wrap">
+        <picture class="modal__add"><source srcset="./assets/banner/Banner_1.png" media="(max-width: 425px)"><img src="./assets/img/main/main_log/Banner.png" alt=""></picture>
+        <div class="modal__forms">
+          <div class="modal__forms__top">
+            <h2 class="modal__text-auth">Регистрация</h2>
+          </div>
+          <div class="modal__forms__container">
+            <div class="modal__forms__inputs">
+              <input placeholder="Почта" type="email" class="modal__input-email">
+              <div class="modal__input--wrapper">
+
+                <input placeholder="Пароль" id="password" type="password" class="modal__input-password">
+                <button class="modal__input--toggle" type="button" onclick="togglePassword()"><img
+                    src="./assets/img/main/main_reg/eye-1.png" alt=""></button>
+              </div>
+              <div class="modal__forms__inputs__aditional-wrap">
+
+                <form placeholder="Валюта" action="" class="modal__forms__inputs-currency">
+                  <select name="currency" id="" class="modal__forms__inputs-currency-select">
+                    <option class="modal__forms__inputs-currency-select-main" value="" disabled selected>Валюта</option>
+                    <option value="USD">USD</option>
+                    <option value="RUB">RUB</option>
+                    <option value="EUR">EUR</option>
+                  </select>
+                </form>
+                <input placeholder="Промокод" type="text" class="modal__forms__inputs-promocode">
+              </div>
+              <div class="modal__forms__inputs__checkbox--wrapp">
+                <input type="checkbox" name="" id="regCheckbox" class="modal__forms__inputs__checkbox">
+                <p>Я согласен (-на) с правилами и условиями</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal__forms__button--auth">
+            <div id="modBtnContainer" class="modal__button-container ">
+              <div class="modal__button-shadow-bgc-correct"></div>
+              <div class="modal__button-shadow"></div>
+              <div class="modal__button-shadow-bgc"></div>
+              <button id="modalButtonSign" class="modal__button-signin ">Регистрация</button>
+            </div>
+            <p class="modal__forms__or-text">или</p>
+            <div class="modal__button-container">
+              <div class="modal__button__telegram-shadow"></div>
+              <button class="modal__button__telegram-signin">Вход через Telegram</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="nav_menu">
+    <div class="nav_menu__button">
+      <a href="index.html" class="nav_menu__link link_home">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M18.896 12.9686C18.755 14.5284 18.5284 15.7958 18.2528 16.9267C18.069 18.0576 16.9663 19 15.7718 19H14.3016C13.4746 19 12.8313 18.3403 12.8313 17.4921V13.6283C12.8313 12.6859 12.0962 11.9319 11.1773 11.9319H9.06383C8.14497 11.9319 7.40985 12.6859 7.40985 13.6283V17.4921C7.40985 18.3403 6.76663 19 5.93963 19H4.19374C2.99917 19 1.98839 18.1518 1.71272 16.9267C1.43706 15.7016 1.19804 14.5294 1.0695 12.9686C0.906363 10.9877 1.0695 9.10468 1.16139 7.87958C1.16139 7.12565 1.62084 6.37173 2.26406 5.90053L8.69627 1.4712C9.06383 1.18848 9.52328 1 9.98273 1C10.4422 1 10.9935 1.18848 11.3611 1.4712L17.7933 5.90053C18.4365 6.37173 18.896 7.12565 18.896 7.87958C18.9879 9.10468 19.0748 10.9894 18.896 12.9686Z"
+            fill="#7C612F" />
+        </svg>
+        <span>Главная</span>
+      </a>
+    </div>
+    <div class="nav_menu__button">
+      <a href="games.html" class="nav_menu__link link_games">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_79_260)">
+            <path
+              d="M9.2098 11.0614C8.5973 10.5436 7.825 10.2344 6.9866 10.2344C6.39828 10.2344 5.82676 10.3864 5.3125 10.6771C4.79824 10.3864 4.22668 10.2344 3.6384 10.2344C1.65371 10.2344 0.0390625 11.9674 0.0390625 14.0976C0.0390625 17.297 2.45398 20 5.3125 20C6.88094 20 8.31574 19.1861 9.29144 17.9231C8.60883 16.7832 8.24219 15.4638 8.24219 14.0976C8.24219 12.9582 8.60289 11.9061 9.2098 11.0614Z"
+              fill="#7C612F" />
+            <path
+              d="M11.9738 8.59972C12.0711 8.78144 12.1696 8.9562 12.2683 9.12409C12.5112 9.0837 12.7601 9.06253 13.0136 9.06253C13.2223 9.06253 13.4305 9.07726 13.6367 9.10593C13.4221 8.7787 13.2017 8.41296 12.9888 8.01257C12.24 6.60413 11.7866 5.17816 11.6301 3.74831C11.7414 3.89663 11.8644 4.04038 12.0007 4.17671C13.3741 5.55015 15.4951 5.59023 15.5847 5.59124C15.587 5.59128 15.5892 5.59128 15.5914 5.59128C15.7468 5.59128 15.8958 5.5296 16.0057 5.41964C16.1173 5.30812 16.1791 5.15632 16.1773 4.99859C16.1763 4.90898 16.1363 2.788 14.7628 1.41456C13.3943 0.0460084 11.2838 0.00132089 11.1801 3.18287e-05C11.1679 -0.000163484 11.1557 0.000578704 11.1434 0.0012037C11.0535 0.00514902 10.9669 0.0297975 10.8895 0.0727271C9.4675 0.828274 8.2575 1.89699 7.29305 3.24956C6.52695 4.32394 5.91477 5.5773 5.47348 6.97488C5.21121 7.80554 5.04109 8.58499 4.93066 9.25066C5.05969 9.28882 5.18719 9.33249 5.31266 9.38195C5.58074 9.27628 5.85797 9.19613 6.14012 9.14253C6.24172 8.59441 6.38598 7.97695 6.59098 7.32773C7.36828 4.86577 8.65824 2.98757 10.433 1.728C10.2612 4.02718 10.7851 6.37898 11.9738 8.59972Z"
+              fill="#7C612F" />
+            <path
+              d="M16.3616 10.2344C15.7733 10.2344 15.2018 10.3864 14.6875 10.6771C14.1732 10.3864 13.6017 10.2344 13.0134 10.2344C11.0287 10.2344 9.41406 11.9674 9.41406 14.0976C9.41406 17.297 11.829 20 14.6875 20C17.546 20 19.9609 17.297 19.9609 14.0976C19.9609 11.9674 18.3463 10.2344 16.3616 10.2344Z"
+              fill="#7C612F" />
+          </g>
+          <defs>
+            <clipPath id="clip0_79_260">
+              <rect width="20" height="20" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <span>Игры</span>
+      </a>
+    </div>
+    <div class="nav_menu__button">
+      <a href="#" class="nav_menu__link link_account">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V6.7065C2.98132 8.42569 3.57455 10.0955 4.67371 11.4176C5.77286 12.7396 7.30629 13.6278 9 13.9233V18H5C4.46957 18 3.96086 18.2107 3.58579 18.5858C3.44979 18.7218 3.33541 18.8753 3.24484 19.0411C2.98007 19.5258 3.44772 20 4 20H16C16.5523 20 17.0199 19.5258 16.7552 19.0411C16.6646 18.8753 16.5502 18.7218 16.4142 18.5858C16.0391 18.2107 15.5304 18 15 18H11V13.9209C12.6651 13.6814 14.1882 12.85 15.2901 11.5789C16.3921 10.3078 16.9991 8.68224 17 7V2C17 1.46957 16.7893 0.960859 16.4142 0.585786C16.0391 0.210714 15.5304 0 15 0ZM12.87 7.21L11.6573 7.8163C11.2934 7.99828 10.9984 8.29333 10.8164 8.6572L10.21 9.87C10.1904 9.90893 10.1604 9.94167 10.1234 9.96454C10.0863 9.98741 10.0436 9.99953 10 9.99953C9.95643 9.99953 9.91372 9.98741 9.87663 9.96454C9.83955 9.94167 9.80956 9.90893 9.79 9.87L9.1837 8.6573C9.00173 8.29343 8.70667 7.99837 8.3428 7.8164L7.13 7.21C7.09106 7.19044 7.05833 7.16045 7.03546 7.12337C7.01259 7.08628 7.00047 7.04357 7.00047 7C7.00047 6.95643 7.01259 6.91372 7.03546 6.87663C7.05833 6.83955 7.09106 6.80956 7.13 6.79L8.3427 6.1837C8.70658 6.00169 9.00163 5.7066 9.1836 5.3427L9.79 4.13C9.80956 4.09106 9.83955 4.05833 9.87663 4.03546C9.91372 4.01259 9.95643 4.00047 10 4.00047C10.0436 4.00047 10.0863 4.01259 10.1234 4.03546C10.1604 4.05833 10.1904 4.09106 10.21 4.13L10.8163 5.3426C10.9983 5.7065 11.2933 6.00159 11.6572 6.1836L12.87 6.79C12.9089 6.80956 12.9417 6.83955 12.9645 6.87663C12.9874 6.91372 12.9995 6.95643 12.9995 7C12.9995 7.04357 12.9874 7.08628 12.9645 7.12337C12.9417 7.16045 12.9089 7.19044 12.87 7.21ZM17.957 7.83C17.9854 7.55424 17.9997 7.27722 18 7V2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V5C19.9987 5.62625 19.8009 6.23628 19.4343 6.74404C19.0677 7.2518 18.551 7.63165 17.957 7.83ZM2 2V6.7061C2.00293 7.08658 2.0317 7.46642 2.0861 7.843C1.48194 7.6514 0.954298 7.27276 0.57934 6.76176C0.204381 6.25075 0.00150542 5.63381 0 5V3C0 2.73478 0.105357 2.48043 0.292893 2.29289C0.48043 2.10536 0.734784 2 1 2H2Z"
+            fill="#7C612F" />
+        </svg>
+        <span>Турниры</span>
+      </a>
+    </div>
+    <div class="nav_menu__button nav-active">
+      <a href="#" class="nav-active nav_menu__link link_bonus">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10.2163 7.50081C10.1032 7.50081 10.0226 7.49915 9.98764 7.49837C9.85758 7.4952 9.73005 7.46165 9.61527 7.4004C9.50048 7.33915 9.40162 7.2519 9.32657 7.14562C9.25153 7.03934 9.20238 6.91698 9.18307 6.78831C9.16376 6.65965 9.17481 6.52825 9.21534 6.40462C9.50506 5.52571 9.76548 4.6289 9.99009 3.73698C10.4849 1.90753 11.5672 0.833313 12.8929 0.833313C13.7004 0.863457 14.463 1.21215 15.014 1.80312C15.565 2.39409 15.8595 3.17923 15.8332 3.9868C15.8332 5.93341 13.8809 6.78627 13.2388 7.06622C12.2634 7.3823 11.2412 7.52929 10.2163 7.50081ZM12.8929 2.49998C12.0742 2.49998 11.6519 3.97377 11.6063 4.14142C11.4671 4.6948 11.315 5.249 11.1514 5.79913C11.6308 5.78191 12.1052 5.69585 12.5601 5.5436C13.3609 5.19448 14.1665 4.74119 14.1665 3.9868C14.1921 3.62135 14.0728 3.26053 13.8345 2.98231C13.5962 2.70409 13.258 2.53083 12.8929 2.49998Z"
+            fill="#7C612F" />
+          <path
+            d="M9.7321 7.50083C8.73488 7.51952 7.74158 7.37097 6.79345 7.06138C4.53109 6.18 4.17627 4.7575 4.1665 3.98763C4.16812 3.55573 4.25656 3.12857 4.42656 2.73153C4.59656 2.33449 4.84465 1.97568 5.15609 1.67643C5.67662 1.15061 6.38166 0.848453 7.12142 0.834167C8.67741 0.879734 9.41225 2.46667 9.94857 3.62551L9.19336 3.97707L9.94938 3.62713C10.299 4.55458 10.5837 5.50522 10.8014 6.47217C10.8298 6.59218 10.8312 6.71699 10.8054 6.8376C10.7797 6.9582 10.7275 7.07158 10.6526 7.16954C10.5776 7.2675 10.4819 7.34759 10.3723 7.40404C10.2626 7.46049 10.1418 7.49187 10.0186 7.49593C9.9795 7.49756 9.87858 7.50083 9.7321 7.50083ZM7.05631 2.5C6.77553 2.52613 6.51463 2.65615 6.3247 2.86459C6.17428 3.00686 6.05342 3.17744 5.96907 3.36653C5.88472 3.55561 5.83854 3.7595 5.83317 3.96648C5.84294 4.7404 6.69092 5.23275 7.39974 5.50944C7.88777 5.67395 8.39589 5.77141 8.91015 5.79915C8.78533 5.2985 8.62738 4.80669 8.43734 4.32698L8.4365 4.32536C8.06299 3.51888 7.5983 2.51546 7.07259 2.50083L7.05631 2.5Z"
+            fill="#7C612F" />
+          <path
+            d="M16.2498 5.83331H3.74984C3.1973 5.83331 2.6674 6.05281 2.2767 6.44351C1.886 6.83421 1.6665 7.36411 1.6665 7.91665V17.0833C1.6665 17.6358 1.886 18.1658 2.2767 18.5565C2.6674 18.9472 3.1973 19.1666 3.74984 19.1666H16.2498C16.5234 19.1667 16.7943 19.1128 17.0471 19.0081C17.2999 18.9034 17.5295 18.7499 17.723 18.5565C17.9165 18.363 18.0699 18.1334 18.1746 17.8806C18.2793 17.6278 18.3332 17.3569 18.3332 17.0833V7.91665C18.3332 7.64306 18.2793 7.37214 18.1746 7.11937C18.0699 6.86661 17.9165 6.63694 17.723 6.44348C17.5295 6.25002 17.2999 6.09657 17.0471 5.99187C16.7943 5.88718 16.5234 5.8333 16.2498 5.83331ZM13.2044 13.1083L12.7466 13.5661L10.479 15.8338C10.4161 15.8967 10.3414 15.9466 10.2592 15.9807C10.177 16.0147 10.0889 16.0323 9.99998 16.0323C9.91101 16.0323 9.82292 16.0147 9.74073 15.9807C9.65854 15.9466 9.58386 15.8967 9.52095 15.8338L7.25305 13.5661L6.79529 13.1083C6.59195 12.9048 6.43631 12.6587 6.3396 12.3877C6.24289 12.1168 6.20751 11.8277 6.23603 11.5414C6.26454 11.2552 6.35623 10.9788 6.50448 10.7322C6.65274 10.4857 6.85386 10.2751 7.09335 10.1157C7.48034 9.8694 7.94053 9.76443 8.39603 9.8185C8.85153 9.87258 9.27435 10.0824 9.59294 10.4124L9.99984 10.8193L10.4067 10.4124C10.7253 10.0823 11.1481 9.87254 11.6037 9.81848C12.0592 9.76443 12.5194 9.86944 12.9063 10.1157C13.1458 10.2752 13.3469 10.4857 13.4952 10.7323C13.6435 10.9788 13.7351 11.2552 13.7637 11.5415C13.7922 11.8278 13.7568 12.1168 13.6601 12.3877C13.5634 12.6587 13.4077 12.9048 13.2044 13.1083Z"
+            fill="#7C612F" />
+        </svg>
+        <span>Бонусы</span>
+      </a>
+    </div>
+    <div class="nav_menu__button">
+      <div class="new__message-active"></div>
+      <div class="nav_menu__link link_chat">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M0.385809 15.9524C0.619358 16.0491 0.888188 15.9957 1.06694 15.8169L1.18919 15.6947C2.03665 14.8472 3.32872 14.6288 4.3895 15.1604C5.4642 15.699 6.67913 16.0005 7.96707 16C12.366 16.0019 15.9573 12.4841 15.9996 8.07843C16.0422 3.64457 12.4994 0 8 0C3.57114 0 -0.0405768 3.63923 0.000344394 8.07535L6.10786e-10 15.375C-1.11356e-05 15.6277 0.15226 15.8557 0.385809 15.9524ZM4 9C4.55228 9 5 8.55229 5 8C5 7.44772 4.55228 7 4 7C3.44772 7 3 7.44772 3 8C3 8.55229 3.44772 9 4 9ZM9 8C9 8.55229 8.55229 9 8 9C7.44772 9 7 8.55229 7 8C7 7.44772 7.44772 7 8 7C8.55229 7 9 7.44772 9 8ZM12 9C12.5523 9 13 8.55229 13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8C11 8.55229 11.4477 9 12 9Z"
+            fill="#7C612F" />
+        </svg>
+        <span>Чат</span>
+      </div>
+    </div>
+  </nav>
+  <div class="chat-window" id="chat" style="display: none;">
+    <div class="chat__header__container">
+      <div class="chat-header">
+        <div class="chat__title">Чат</div>
+        <div class="chat__close"><img src="./assets/img/main/main_reg/Vector.png" alt=""></div>
+      </div>
+      <div class="chat__fixed__message">
+        <div class="chat-header chat-header1">
+          <div class="chat__title">
+            <div class="chat__title__top">100% к Депозиту + 100FS</div>
+            <div class="chat__title__bottom">Подробнее</div>
+          </div>
+          <div class="fixed__message"><img src="./assets/icon/fixedMessageIcon 1.svg" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-body" id="chat-body">
+
+      <div class="message">
+        <div class="message__header">
+          <div class="message__from">Gena</div>
+          <span>новичок</span>
+          <div class="message__time">8:58</div>
+        </div>
+        <div class="message__text">Эй, ребята! Как дела? Давайте обсудим последние игры и стратегии, которые вы
+          используете</div>
+      </div>
+      <div class="message">
+        <div class="message__header">
+          <div class="message__from">Gena</div>
+          <span>новичок</span>
+          <div class="message__time">8:58</div>
+        </div>
+        <div class="message__text">Что нового в мире гейминга?</div>
+      </div>
+
+      <div class="message__win">
+        <div class="message__win__header">
+          <div class="left__part__win__header">
+            <div class="message__from1 message__from">Gena</div>
+            <div class="message__time">8:58</div>
+          </div>
+          <div class="right__part__win__header">
+            <div class="container__win__target">МЕГА ВЫИГРЫШ</div>
+          </div>
+        </div>
+        <div class="sum">Ставка: 10$</div>
+        <div class="container__sum__win">
+          <div class="sum__title">+$1399.00</div>
+          <span>x139</span>
+        </div>
+        <div class="link__to__game">
+          <img src="./assets/img/main/main/games/40_joker.png" alt="">
+          <a href="game.html" class="button__go__play">
+            Играть
+          </a>
+        </div>
+      </div>
+      <div class="message">
+        <div class="message__header status-top">
+          <div class="message__from">6178234bjca</div>
+          <span>топ</span>
+          <div class="message__time">8:58</div>
+        </div>
+        <img class="message__sticker" src="./assets/img/levels/avatar10.png" alt="">
+      </div>
+      <div class="message">
+        <div class="message__header">
+          <div class="message__from">Gena</div>
+          <span>новичок</span>
+          <div class="message__time">8:58</div>
+        </div>
+        <div class="message__text">)))))</div>
+      </div>
+    </div>
+    <div class="chat-input">
+      <div class="stikers__container">
+        
+        <img class="input__stiker" src="./assets/img/levels/avatar10.png" alt="">
+        <img class="input__stiker" src="./assets/img/levels/avatar10.png" alt="">
+        <img class="input__stiker" src="./assets/img/levels/avatar10.png" alt="">
+        <img class="input__stiker" src="./assets/img/levels/avatar10.png" alt="">
+        <img class="input__stiker" src="./assets/img/levels/avatar10.png" alt="">
+        <div class="btn__all__stickers">
+          <img src="./assets/icon/stikersBtn.svg" alt="">
+          <img style="max-width: 12px;" src="./assets/icon/arrowup_stikers.svg" alt="">
+        </div>
+      </div>
+      <input type="text" id="chat-message" placeholder="Напишите сообщение...">
+    </div>
+    <div class="resizer top"></div>
+    <div class="resizer left"></div>
+  </div>
+  <main class="main__bonuses">
+    <div class="wrap">
+      <div class="bonuses__head">
+        <h1>Бонусы</h1>
+        <div class="bonuses__change">
+          <div class="bonuses__btn bonuses__btn-active">Доступные</div>
+          <div class="bonuses__btn">Активные</div>
+        </div>
+        <div class="bonuses__list">
+            <div class="bonus__item">
+              <img class="bonus__item__img" src="./assets/img/bonuses/Banner_bonuses.png" alt="">
+              <div class="bonus__item__title">100% к Депозиту + 100FS</div>
+              <div class="bonus__item__btn"><span>Получить</span></div>
+              <div class="conditions">
+                Условия</div>
+                <ul class="conditions__list">
+                  <li class="conditions__list__item">
+                    Минимальный депозит: 1
+                    </li>
+                  <li class="conditions__list__item">Процент: 100%</li>
+                  <li class="conditions__list__item">Вейджер: x5</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="about__us__border"></div>
+  <footer class="footer">
+    <div class="select__language-footer">
+      <div>Выберите язык</div>
+      <select class="language language1">
+        <option>RU</option>
+        <option>EN</option>
+      </select>
+    </div>
+    <section class="transactions">
+      <div class="transactions__title">Удобные транзакции</div>
+      <div class="transactions__list_img">
+        <img src="./assets/img/main/main/transactions/visa.png" alt="">
+        <img src="./assets/img/main/main/transactions/master_card.png" alt="">
+        <img src="./assets/img/main/main/transactions/city_24.png" alt="">
+        <img src="./assets/img/main/main/transactions/easy_pay.png" alt="">
+        <img src="./assets/img/main/main/transactions/apple_pay.png" alt="">
+        <img src="./assets/img/main/main/transactions/goo_pay.png" alt="">
+        <img src="./assets/img/main/main/transactions/p2p.png" alt="">
+        <img src="./assets/img/main/main/transactions/BYT.png" alt="">
+        <img src="./assets/img/main/main/transactions/Eth.png" alt="">
+        <img src="./assets/img/main/main/transactions/usdt.png" alt="">
+      </div>
+    </section>
+      <div class="rules">
+        <div class="rules__title">Правила и условия</div>
+        <div class="rules__text"><img class="rules__img" src="./assets/img/main/main/footer/21+red.png" alt="">Азартные
+          игры призваны развлекать. Помните, что Вы рискуете деньгами, когда делаете ставки. Не тратьте больше, чем
+          можете себе позволить проиграть</div>
+
+      </div>
+      <div class="sponsors">
+        <a href="#"><img src="./assets/img/main/main/footer/gamCare.png" alt=""></a>
+        <a href="#"><img src="./assets/img/main/main/footer/gambing.png" alt=""></a>
+        <a href="#"><img src="./assets/img/main/main/footer/begameble.png" alt=""></a>
+        <a href="#"><img src="./assets/img/main/main/footer/21+png.png" alt=""></a>
+        <a href="#"><img src="./assets/img/main/main/footer/sslsecure.png" alt=""></a>
+        <a href="#"><img src="./assets/img/main/main/footer/dmcaprotected.png" alt=""></a>
+      </div>
+      <div class="all_rigth_received">© 2021-2025 Rutor Casino. Все права защищены.</div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

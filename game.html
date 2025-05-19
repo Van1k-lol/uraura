@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Page</title>
+  <link rel="stylesheet" href="./css/game.css">
+  <script src="./js/game.js" defer></script>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrap header__wrap">
+      <div class="logo">
+        <a href="#" class="logo__link">
+          <img src="./assets/img/main/main_top/logo.png" alt="logo" class="logo__img">
+        </a>
+      </div>
+      <div class="auth_container">
+        <div class="header-buttons">
+          <!-- Баланс -->
+          <div class="balance-wrapper">
+            <div class="balance-button" id="balanceButton">
+              <div class="balance-label">Баланс</div>
+              <div class="balance-value">0.00 USD</div>
+              <img src="./assets/img/bonuses/arrowdown.svg" alt="arrow" class="arrow-icon">
+            </div>
+
+            <!-- Модалка -->
+            <div class="balance-modal hidden" id="balanceModal">
+              <div class="modal__balance">
+  <div class="modal__balance__main">
+    <div class="balance__main__wrap">
+      <div class="balance__info">
+        <div class="modal__balance-amount">
+          <img class="modal__balance-amount-img" src="./assets/img/balance/Balance Icon.png" alt="">
+          <div class="modal__balance-amount-text">
+            <h>Баланс</h>
+            <p>0.00 USD</p>
+          </div>
+        </div>
+        <div class="modal__balance-amount-bonus">
+          <img class="modal__balance__bonus-amount-img" src="./assets/img/balance/Bonus Giftbox.png" alt="">
+          <div class="modal__balance-bonus-amount-text">
+              <h>Бонусный Баланс</h>
+              <p>0.00 USD</p>
+            </div>
+        </div>
+        
+      </div>
+    <div class="balance__info-buttons">
+      <div class="modal__balance__button-container">
+        <div class="modal__balance__button-shadow-bgc-correct"></div>
+        <div class="modal__balance__button-shadow"></div>
+        <div class="modal__balance__button-shadow-bgc"></div>
+        <button id="modalButtonSign" class="modal__balance__button-signin "><img src="./assets/icon/Arrow 1 (Stroke).png" alt="" class="modal__balance__button-img">Пополнить</button>
+      </div>
+      <div class="modal__balance__button__withdraw-container">
+        <div class="modal__balance__button__withdraw-shadow-bgc-correct"></div>
+        <div class="modal__balance__button__withdraw-shadow"></div>
+        <div class="modal__balance__button__withdraw-shadow-bgc"></div>
+        <button id="modalButtonSign" class="modal__balance__button__withdraw-signin "><img src="./assets/icon/Arrow 1 (Stroke).png" alt="" class="modal__balance__button__withdraw-img">Вывести</button>
+      </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+
+          <!-- Профиль -->
+          <a href="profile1.html" class="profile-button">
+            <div class="profile__button__container">
+              <span class="level-badge">1 уровень</span>
+              <img src="./assets/img/levels/dragon_1.png" alt="avatar" class="profile-icon" />
+              <span class="profile-text">Профиль</span>
+            </div>
+          </a>
+          <select class="language">
+            <option>RU</option>
+            <option>EN</option>
+          </select>
+        </div>
+
+
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="main_top">
+      <a href="index.html">
+        <div class="back_button">
+          <img src="./assets/img/main/main/arrowleft.svg" alt="">
+          <div class="name_game">40 Joker Starxxxx</div>
+        </div>
+      </a>
+      <div class="link_to_game">
+        <div class="link_text">Вы сейчас в Демо режиме</div>
+        <a href="#"><button>Играть</button></a>
+      </div>
+      <div class="view__container">
+        <div class="title__view">Вид:</div>
+        <div class="button__view active">
+          <svg class="view-svg1" width="24" height="24" viewBox="0 0 24 24" fill="#e8b21d"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15 3.5C15 2.94772 15.4477 2.5 16 2.5C16.5523 2.5 17 2.94772 17 3.5V7.5C17 8.60457 16.1046 9.5 15 9.5V3.5Z"
+              fill="#E8B21D" />
+            <path
+              d="M21 14.5C21.5523 14.5 22 14.9477 22 15.5C22 16.0523 21.5523 16.5 21 16.5H17C15.8954 16.5 15 15.6046 15 14.5H21Z"
+              fill="#E8B21D" />
+            <path
+              d="M9 20.5C9 21.0523 8.55228 21.5 8 21.5C7.44772 21.5 7 21.0523 7 20.5L7 16.5C7 15.3954 7.89543 14.5 9 14.5L9 20.5Z"
+              fill="#E8B21D" />
+            <path
+              d="M3 9.5C2.44772 9.5 2 9.05228 2 8.5C2 7.94772 2.44772 7.5 3 7.5L7 7.5C8.10457 7.5 9 8.39543 9 9.5L3 9.5Z"
+              fill="#E8B21D" />
+            <path
+              d="M21 7.5C21.5523 7.5 22 7.94772 22 8.5C22 9.05228 21.5523 9.5 21 9.5H15C15 8.39543 15.8954 7.5 17 7.5L21 7.5Z"
+              fill="#E8B21D" />
+            <path
+              d="M17 20.5C17 21.0523 16.5523 21.5 16 21.5C15.4477 21.5 15 21.0523 15 20.5V14.5C16.1046 14.5 17 15.3954 17 16.5L17 20.5Z"
+              fill="#E8B21D" />
+            <path
+              d="M3 16.5C2.44772 16.5 2 16.0523 2 15.5C2 14.9477 2.44772 14.5 3 14.5H9C9 15.6046 8.10457 16.5 7 16.5L3 16.5Z"
+              fill="#E8B21D" />
+            <path
+              d="M7 3.5C7 2.94772 7.44772 2.5 8 2.5C8.55228 2.5 9 2.94772 9 3.5V9.5C7.89543 9.5 7 8.60457 7 7.5L7 3.5Z"
+              fill="#E8B21D" />
+          </svg>
+        </div>
+        <div class="button__view">
+          <svg class="view-svg2" width="24" height="24" viewBox="0 0 24 24" fill="#a68e62"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 9C21 9.55228 20.5523 10 20 10C19.4477 10 19 9.55228 19 9L19 5C19 3.89543 19.8954 3 21 3L21 9Z"
+              fill="#A68E62" />
+            <path d="M15 5C14.4477 5 14 4.55228 14 4C14 3.44771 14.4477 3 15 3L21 3C21 4.10457 20.1046 5 19 5L15 5Z"
+              fill="#A68E62" />
+            <path d="M3 15C3 14.4477 3.44772 14 4 14C4.55228 14 5 14.4477 5 15L5 19C5 20.1046 4.10457 21 3 21L3 15Z"
+              fill="#A68E62" />
+            <path d="M9 19C9.55228 19 10 19.4477 10 20C10 20.5523 9.55228 21 9 21L3 21C3 19.8954 3.89543 19 5 19L9 19Z"
+              fill="#A68E62" />
+            <path d="M9 3C9.55228 3 10 3.44772 10 4C10 4.55228 9.55228 5 9 5L5 5C3.89543 5 3 4.10457 3 3L9 3Z"
+              fill="#A68E62" />
+            <path d="M5 9C5 9.55228 4.55228 10 4 10C3.44772 10 3 9.55228 3 9L3 3C4.10457 3 5 3.89543 5 5L5 9Z"
+              fill="#A68E62" />
+            <path
+              d="M15 21C14.4477 21 14 20.5523 14 20C14 19.4477 14.4477 19 15 19L19 19C20.1046 19 21 19.8954 21 21L15 21Z"
+              fill="#A68E62" />
+            <path
+              d="M19 15C19 14.4477 19.4477 14 20 14C20.5523 14 21 14.4477 21 15L21 21C19.8954 21 19 20.1046 19 19L19 15Z"
+              fill="#A68E62" />
+          </svg>
+        </div>
+      </div>
+
+    </section>
+    <img class="game__img" src="./assets/img/main/game.png" alt="">
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/game.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link rel="stylesheet" href="./css/balance_profile.css" />
+    <script src="./js/game.js" defer></script>
+    <script src="./js/profile.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="wrap header__wrap">
+        <div class="logo">
+          <a href="index.html" class="logo__link">
+            <img
+              src="./assets/img/main/main_top/logo.png"
+              alt="logo"
+              class="logo__img"
+            />
+          </a>
+        </div>
+        <div class="auth_container">
+          <div class="header-buttons">
+            <!-- Баланс -->
+            <div class="balance-wrapper">
+              <div class="balance-button" id="balanceButton">
+                <div class="balance-label">Баланс</div>
+                <div class="balance-value">0.00 USD</div>
+                <img
+                  src="./assets/img/bonuses/arrowdown.svg"
+                  alt="arrow"
+                  class="arrow-icon"
+                />
+              </div>
+
+              <!-- Модалка -->
+              <div class="balance-modal hidden" id="balanceModal">
+                <div class="modal__balance">
+                  <div class="modal__balance__main">
+                    <div class="balance__main__wrap">
+                      <div class="balance__info">
+                        <div class="modal__balance-amount-bonus">
+                          <img
+                            class="modal__balance__bonus-amount-img"
+                            src="./assets/img/balance/Balance Icon.png"
+                            alt=""
+                          />
+                          <div class="modal__balance-bonus-amount-text">
+                            <h>Баланс</h>
+                            <p>0.00 USD</p>
+                          </div>
+                        </div>
+                        <div class="modal__balance-amount-bonus">
+                          <img
+                            class="modal__balance__bonus-amount-img"
+                            src="./assets/img/balance/Bonus Giftbox.png"
+                            alt=""
+                          />
+                          <div class="modal__balance-bonus-amount-text">
+                            <h>Бонусный Баланс</h>
+                            <p>0.00 USD</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="balance__info-buttons">
+                        <div class="modal__balance__button-container">
+                          <div
+                            class="modal__balance__button-shadow-bgc-correct"
+                          ></div>
+                          <div class="modal__balance__button-shadow"></div>
+                          <div class="modal__balance__button-shadow-bgc"></div>
+                          <button
+                            id="modalButtonSign"
+                            class="modal__balance__button-signin"
+                          >
+                            <img
+                              src="./assets/icon/Arrow 1 (Stroke).png"
+                              alt=""
+                              class="modal__balance__button-img"
+                            />Пополнить
+                          </button>
+                        </div>
+                        <div class="modal__balance__button__withdraw-container">
+                          <div
+                            class="modal__balance__button__withdraw-shadow-bgc-correct"
+                          ></div>
+                          <div
+                            class="modal__balance__button__withdraw-shadow"
+                          ></div>
+                          <div
+                            class="modal__balance__button__withdraw-shadow-bgc"
+                          ></div>
+                          <button
+                            id="modalButtonSign"
+                            class="modal__balance__button__withdraw-signin"
+                          >
+                            <img
+                              src="./assets/icon/Arrow 1 (Stroke).png"
+                              alt=""
+                              class="modal__balance__button__withdraw-img"
+                            />Вывести
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Профиль -->
+            <a href="profile1.html" class="profile-button">
+              <div class="profile__button__container">
+                <span class="level-badge">1 уровень</span>
+                <img
+                  src="./assets/img/levels/dragon_1.png"
+                  alt="avatar"
+                  class="profile-icon"
+                />
+                <span class="profile-text">Профиль</span>
+              </div>
+            </a>
+            <select class="language">
+              <option>RU</option>
+              <option>EN</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="modalContainerJs" class="modalContainerJs"></div>
+    <main>
+      <div class="first__wrap__main">
+        <h1 class="profile__title"><span>Главная</span> / Профиль</h1>
+        <div class="profile__main__container">
+          <nav class="profile__nav">
+            <a href="profile1.html" class="profile__nav__item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="#fed970"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7285 14.8607C17.7285 17.4223 14.2687 19.5 10 19.5C5.73134 19.5 2.27148 17.4223 2.27148 14.8607C2.27148 12.2973 5.73134 10.2195 10 10.2195C14.2687 10.2195 17.7285 12.2973 17.7285 14.8607Z"
+                  fill="#FED970"
+                />
+                <path
+                  d="M5.63672 4.8639C5.63672 2.45325 7.58998 0.5 10.0006 0.5C12.4112 0.5 14.3645 2.45325 14.3645 4.8639C14.3645 7.27449 12.4112 9.23 10.0006 9.23C7.58998 9.23 5.63672 7.27449 5.63672 4.8639Z"
+                  fill="#FED970"
+                />
+              </svg>
+              <span>Профиль</span>
+            </a>
+            <a href="balance_profile.html" class="profile__nav__item active">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="#7C612F"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.6347 0.438477H6.45664C5.1799 0.438477 4.12637 1.47419 4.09961 2.75093H13.5456C15.8312 2.75093 17.6883 4.61691 17.6883 6.90255V15.4648C18.9651 15.438 20.0007 14.3845 20.0007 13.0988V2.80449C20.0007 1.50095 18.9383 0.438477 17.6347 0.438477Z"
+                  fill="#7C612F"
+                />
+                <path
+                  d="M13.5441 4.53613H2.36602C1.06247 4.53613 0 5.5986 0 6.9021V8.58062H15.9011V6.9021C15.9011 5.5986 14.8386 4.53613 13.5441 4.53613Z"
+                  fill="#7C612F"
+                />
+                <path
+                  d="M0 17.1964C0 18.4999 1.06247 19.5623 2.36602 19.5623H13.5441C14.8386 19.5623 15.9011 18.4999 15.9011 17.1964V10.3662H0V17.1964ZM9.2049 14.2054H11.8834C12.3745 14.2054 12.7762 14.5982 12.7762 15.0982C12.7762 15.5893 12.3745 15.991 11.8834 15.991H9.2049C8.71385 15.991 8.31207 15.5893 8.31207 15.0982C8.31207 14.5982 8.71385 14.2054 9.2049 14.2054Z"
+                  fill="#7C612F"
+                />
+              </svg>
+              <span>Баланс</span>
+            </a>
+            <a href="promocodes_profile.html" class="profile__nav__item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="#7C612F"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.2144 7.50051C10.1012 7.50051 10.0207 7.49884 9.98569 7.49807C9.85562 7.4949 9.7281 7.46135 9.61332 7.4001C9.49853 7.33885 9.39966 7.2516 9.32462 7.14531C9.24957 7.03903 9.20043 6.91667 9.18112 6.78801C9.1618 6.65934 9.17286 6.52795 9.21339 6.40432C9.50311 5.52541 9.76352 4.6286 9.98813 3.73667C10.4829 1.90722 11.5653 0.833008 12.891 0.833008C13.6984 0.863152 14.461 1.21185 15.012 1.80281C15.5631 2.39378 15.8576 3.17892 15.8312 3.98649C15.8312 5.93311 13.8789 6.78597 13.2368 7.06592C12.2615 7.382 11.2393 7.52898 10.2144 7.50051ZM12.891 2.49967C12.0723 2.49967 11.6499 3.97347 11.6043 4.14112C11.4652 4.6945 11.313 5.2487 11.1494 5.79882C11.6288 5.7816 12.1032 5.69555 12.5581 5.54329C13.3589 5.19417 14.1646 4.74088 14.1646 3.98649C14.1901 3.62105 14.0709 3.26022 13.8326 2.982C13.5942 2.70379 13.256 2.53053 12.891 2.49967Z"
+                  fill="#7C612F"
+                />
+                <path
+                  d="M9.73161 7.5005C8.73439 7.51918 7.74109 7.37064 6.79297 7.06104C4.5306 6.17967 4.17578 4.75717 4.16602 3.9873C4.16763 3.5554 4.25607 3.12823 4.42607 2.73119C4.59607 2.33415 4.84416 1.97534 5.1556 1.6761C5.67613 1.15027 6.38117 0.848117 7.12093 0.833832C8.67692 0.879398 9.41177 2.46633 9.94808 3.62517L9.19287 3.97673L9.94889 3.6268C10.2985 4.55424 10.5832 5.50488 10.8009 6.47183C10.8293 6.59184 10.8307 6.71666 10.8049 6.83726C10.7792 6.95786 10.727 7.07124 10.6521 7.1692C10.5772 7.26716 10.4814 7.34726 10.3718 7.40371C10.2621 7.46015 10.1413 7.49154 10.0181 7.4956C9.97901 7.49722 9.87809 7.5005 9.73161 7.5005ZM7.05582 2.49967C6.77505 2.52579 6.51414 2.65582 6.32422 2.86426C6.17379 3.00653 6.05293 3.1771 5.96858 3.36619C5.88423 3.55528 5.83805 3.75916 5.83268 3.96614C5.84245 4.74007 6.69043 5.23242 7.39925 5.50911C7.88728 5.67362 8.3954 5.77108 8.90967 5.79882C8.78485 5.29816 8.62689 4.80635 8.43685 4.32665L8.43602 4.32502C8.0625 3.51855 7.59782 2.51512 7.0721 2.5005L7.05582 2.49967Z"
+                  fill="#7C612F"
+                />
+                <path
+                  d="M16.2493 5.83301H3.74935C3.19681 5.83301 2.66691 6.0525 2.27621 6.4432C1.88551 6.8339 1.66602 7.36381 1.66602 7.91634V17.083C1.66602 17.6355 1.88551 18.1654 2.27621 18.5561C2.66691 18.9468 3.19681 19.1663 3.74935 19.1663H16.2493C16.5229 19.1664 16.7939 19.1125 17.0466 19.0078C17.2994 18.9031 17.5291 18.7496 17.7225 18.5562C17.916 18.3627 18.0694 18.133 18.1741 17.8803C18.2788 17.6275 18.3327 17.3566 18.3327 17.083V7.91634C18.3327 7.64275 18.2788 7.37184 18.1741 7.11907C18.0694 6.8663 17.916 6.63663 17.7225 6.44317C17.5291 6.24972 17.2994 6.09626 17.0466 5.99157C16.7939 5.88687 16.5229 5.833 16.2493 5.83301ZM13.2039 13.108L12.7461 13.5658L10.4785 15.8335C10.4156 15.8964 10.3409 15.9463 10.2587 15.9804C10.1765 16.0144 10.0885 16.032 9.99949 16.032C9.91052 16.032 9.82243 16.0144 9.74024 15.9804C9.65805 15.9463 9.58337 15.8964 9.52047 15.8335L7.25257 13.5658L6.7948 13.108C6.59146 12.9045 6.43582 12.6584 6.33911 12.3874C6.2424 12.1165 6.20702 11.8274 6.23554 11.5411C6.26405 11.2549 6.35574 10.9785 6.50399 10.7319C6.65225 10.4854 6.85337 10.2748 7.09286 10.1153C7.47985 9.8691 7.94004 9.76412 8.39554 9.8182C8.85104 9.87227 9.27387 10.0821 9.59245 10.4121L9.99935 10.819L10.4062 10.4121C10.7248 10.082 11.1477 9.87223 11.6032 9.81818C12.0587 9.76412 12.5189 9.86914 12.9058 10.1154C13.1453 10.2749 13.3465 10.4854 13.4947 10.732C13.643 10.9785 13.7347 11.2549 13.7632 11.5412C13.7917 11.8275 13.7563 12.1165 13.6596 12.3874C13.5629 12.6584 13.4072 12.9045 13.2039 13.108Z"
+                  fill="#7C612F"
+                />
+              </svg>
+              <span>Промокоды</span>
+            </a>
+            <a href="settings__profile.html" class="profile__nav__item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="#7C612F"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 3.00191C6.73478 3.00191 6.48043 3.10723 6.29289 3.29472C6.10536 3.4822 6 3.73649 6 4.00163C6 4.26678 6.10536 4.52106 6.29289 4.70855C6.48043 4.89603 6.73478 5.00136 7 5.00136C7.26522 5.00136 7.51957 4.89603 7.70711 4.70855C7.89464 4.52106 8 4.26678 8 4.00163C8 3.73649 7.89464 3.4822 7.70711 3.29472C7.51957 3.10723 7.26522 3.00191 7 3.00191ZM4.17 3.00191C4.3766 2.41653 4.75974 1.90964 5.2666 1.55109C5.77346 1.19254 6.37909 1 7 1C7.62091 1 8.22654 1.19254 8.7334 1.55109C9.24026 1.90964 9.6234 2.41653 9.83 3.00191H17C17.2652 3.00191 17.5196 3.10723 17.7071 3.29472C17.8946 3.4822 18 3.73649 18 4.00163C18 4.26678 17.8946 4.52106 17.7071 4.70855C17.5196 4.89603 17.2652 5.00136 17 5.00136H9.83C9.6234 5.58673 9.24026 6.09363 8.7334 6.45218C8.22654 6.81072 7.62091 7.00327 7 7.00327C6.37909 7.00327 5.77346 6.81072 5.2666 6.45218C4.75974 6.09363 4.3766 5.58673 4.17 5.00136H3C2.73478 5.00136 2.48043 4.89603 2.29289 4.70855C2.10536 4.52106 2 4.26678 2 4.00163C2 3.73649 2.10536 3.4822 2.29289 3.29472C2.48043 3.10723 2.73478 3.00191 3 3.00191H4.17ZM13 9.00027C12.7348 9.00027 12.4804 9.1056 12.2929 9.29309C12.1054 9.48057 12 9.73486 12 10C12 10.2651 12.1054 10.5194 12.2929 10.7069C12.4804 10.8944 12.7348 10.9997 13 10.9997C13.2652 10.9997 13.5196 10.8944 13.7071 10.7069C13.8946 10.5194 14 10.2651 14 10C14 9.73486 13.8946 9.48057 13.7071 9.29309C13.5196 9.1056 13.2652 9.00027 13 9.00027ZM10.17 9.00027C10.3766 8.4149 10.7597 7.908 11.2666 7.54946C11.7735 7.19091 12.3791 6.99837 13 6.99837C13.6209 6.99837 14.2265 7.19091 14.7334 7.54946C15.2403 7.908 15.6234 8.4149 15.83 9.00027H17C17.2652 9.00027 17.5196 9.1056 17.7071 9.29309C17.8946 9.48057 18 9.73486 18 10C18 10.2651 17.8946 10.5194 17.7071 10.7069C17.5196 10.8944 17.2652 10.9997 17 10.9997H15.83C15.6234 11.5851 15.2403 12.092 14.7334 12.4505C14.2265 12.8091 13.6209 13.0016 13 13.0016C12.3791 13.0016 11.7735 12.8091 11.2666 12.4505C10.7597 12.092 10.3766 11.5851 10.17 10.9997H3C2.73478 10.9997 2.48043 10.8944 2.29289 10.7069C2.10536 10.5194 2 10.2651 2 10C2 9.73486 2.10536 9.48057 2.29289 9.29309C2.48043 9.1056 2.73478 9.00027 3 9.00027H10.17ZM7 14.9986C6.73478 14.9986 6.48043 15.104 6.29289 15.2915C6.10536 15.4789 6 15.7332 6 15.9984C6 16.2635 6.10536 16.5178 6.29289 16.7053C6.48043 16.8928 6.73478 16.9981 7 16.9981C7.26522 16.9981 7.51957 16.8928 7.70711 16.7053C7.89464 16.5178 8 16.2635 8 15.9984C8 15.7332 7.89464 15.4789 7.70711 15.2915C7.51957 15.104 7.26522 14.9986 7 14.9986ZM4.17 14.9986C4.3766 14.4133 4.75974 13.9064 5.2666 13.5478C5.77346 13.1893 6.37909 12.9967 7 12.9967C7.62091 12.9967 8.22654 13.1893 8.7334 13.5478C9.24026 13.9064 9.6234 14.4133 9.83 14.9986H17C17.2652 14.9986 17.5196 15.104 17.7071 15.2915C17.8946 15.4789 18 15.7332 18 15.9984C18 16.2635 17.8946 16.5178 17.7071 16.7053C17.5196 16.8928 17.2652 16.9981 17 16.9981H9.83C9.6234 17.5835 9.24026 18.0904 8.7334 18.4489C8.22654 18.8075 7.62091 19 7 19C6.37909 19 5.77346 18.8075 5.2666 18.4489C4.75974 18.0904 4.3766 17.5835 4.17 16.9981H3C2.73478 16.9981 2.48043 16.8928 2.29289 16.7053C2.10536 16.5178 2 16.2635 2 15.9984C2 15.7332 2.10536 15.4789 2.29289 15.2915C2.48043 15.104 2.73478 14.9986 3 14.9986H4.17Z"
+                  fill="#7C612F"
+                />
+              </svg>
+              <span>Настройки</span>
+            </a>
+            <a href="history_profile.html" class="profile__nav__item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="#7C612F"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_2124_2998)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.5625 1.25V4.91406C1.5625 5.32562 1.83125 5.68906 2.225 5.81C2.61875 5.93125 3.04374 5.78156 3.27499 5.44125C4.73749 3.28969 7.20625 1.875 10 1.875C14.4844 1.875 18.125 5.51562 18.125 10C18.125 14.4844 14.4844 18.125 10 18.125C5.51562 18.125 1.875 14.4844 1.875 10C1.875 9.4825 1.45625 9.0625 0.9375 9.0625C0.41875 9.0625 0 9.4825 0 10C0 15.5191 4.48125 20 10 20C15.5188 20 20 15.5191 20 10C20 4.48094 15.5188 0 10 0C7.49062 0 5.19375 0.926563 3.4375 2.45656V1.25C3.4375 0.7325 3.01875 0.3125 2.5 0.3125C1.98125 0.3125 1.5625 0.7325 1.5625 1.25ZM10 3.75C13.45 3.75 16.25 6.55062 16.25 10C16.25 13.4494 13.45 16.25 10 16.25C6.55 16.25 3.75 13.4494 3.75 10C3.75 6.55062 6.55 3.75 10 3.75ZM9.0625 6.5625V9.61156L7.8125 10.8616C7.44688 11.2275 7.44688 11.8216 7.8125 12.1875C8.17813 12.5534 8.77187 12.5534 9.1375 12.1875L10.6625 10.6628C10.8375 10.4872 10.9375 10.2487 10.9375 10V6.5625C10.9375 6.045 10.5188 5.625 10 5.625C9.48125 5.625 9.0625 6.045 9.0625 6.5625Z"
+                    fill="#7C612F"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2124_2998">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>История</span>
+            </a>
+            <div class="profile__nav__item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="#A74A40"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.34326 6.48412C6.09293 6.27563 5.77004 6.17508 5.44559 6.20457C5.12114 6.23407 4.82168 6.3912 4.61305 6.64142L2.05335 9.71354C1.85395 9.96485 1.76073 10.2842 1.79361 10.6033C1.82648 10.9224 1.98285 11.216 2.2293 11.4214C2.47574 11.6267 2.79274 11.7276 3.11255 11.7024C3.43236 11.6772 3.72963 11.5279 3.94086 11.2865L6.50056 8.21434C6.70905 7.96401 6.8096 7.64112 6.78011 7.31667C6.75061 6.99222 6.59348 6.69276 6.34326 6.48412Z"
+                  fill="#A74A40"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.34449 14.5159C6.59489 14.3074 6.75225 14.008 6.78198 13.6836C6.81171 13.3591 6.71136 13.0361 6.50301 12.7856L3.94209 9.71352C3.84024 9.58516 3.71376 9.47846 3.57006 9.39971C3.42637 9.32096 3.26838 9.27174 3.10539 9.25494C2.94239 9.23815 2.77769 9.25413 2.62096 9.30193C2.46423 9.34973 2.31864 9.4284 2.19276 9.5333C2.06689 9.63819 1.96326 9.76721 1.88798 9.91275C1.81269 10.0583 1.76728 10.2174 1.7544 10.3808C1.74153 10.5441 1.76145 10.7084 1.813 10.8639C1.86455 11.0195 1.94669 11.1631 2.05458 11.2864L4.61427 14.3586C4.82291 14.6088 5.12237 14.7659 5.44682 14.7954C5.77127 14.8249 6.09415 14.7244 6.34449 14.5159Z"
+                  fill="#A74A40"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.30478 10.5C3.30478 10.8259 3.43424 11.1385 3.6647 11.369C3.89515 11.5994 4.20771 11.7289 4.53362 11.7289H12.5212C12.8471 11.7289 13.1596 11.5994 13.3901 11.369C13.6205 11.1385 13.75 10.8259 13.75 10.5C13.75 10.1741 13.6205 9.86156 13.3901 9.6311C13.1596 9.40065 12.8471 9.27118 12.5212 9.27118H4.53362C4.20771 9.27118 3.89515 9.40065 3.6647 9.6311C3.43424 9.86156 3.30478 10.1741 3.30478 10.5Z"
+                  fill="#A74A40"
+                />
+                <path
+                  d="M16.2501 2.5C16.9639 2.5 17.5432 3.07931 17.5432 3.7931V8.7069V11.2931V16.2069C17.5432 16.5498 17.407 16.8788 17.1645 17.1213C16.922 17.3638 16.5931 17.5 16.2501 17.5C15.9072 17.5 15.5783 17.3638 15.3358 17.1213C15.0933 16.8788 14.957 16.5498 14.957 16.2069V11.2931V8.7069V3.7931C14.957 3.07931 15.5363 2.5 16.2501 2.5Z"
+                  fill="#A74A40"
+                />
+              </svg>
+              <span style="color: #a74a40">Выйти из аккаунта</span>
+            </div>
+          </nav>
+          <div class="balance-wrapper1 active">
+            <!-- Модалка -->
+            <div class="balance-modal balance-modal1" id="balanceModal">
+              <div class="modal__balance modal__balance1">
+                <div class="modal__balance__main modal__balance__main1">
+                  <div class="balance__main__wrap balance__main__wrap1">
+                    <div class="title__balance title__balance1">
+                      Баланс счета
+                    </div>
+                    <div class="balance__info balance__info1">
+                      <div class="modal__balance-amount modal__balance-amount1">
+                        <div
+                          class="modal__balance__title modal__balance__title1"
+                        >
+                          <img
+                            class="modal__balance-amount-img modal__balance-amount-img1"
+                            src="./assets/img/balance/Balance Icon.png"
+                            alt=""
+                          />
+                          <h>Баланс</h>
+                        </div>
+                        <div
+                          class="modal__balance-amount-text modal__balance-amount-text1"
+                        >
+                          <p>0.00 USD</p>
+                        </div>
+                      </div>
+                      <div class="modal__balance-amount modal__balance-amount1">
+                        <div
+                          class="modal__balance__title modal__balance__title1"
+                        >
+                          <img
+                            class="modal__balance-amount-img modal__balance-amount-img1"
+                            src="./assets/img/balance/Bonus Giftbox.png"
+                            alt=""
+                          />
+                          <h>Бонусный Баланс</h>
+                        </div>
+                        <div
+                          class="modal__balance-amount-text modal__balance-amount-text1"
+                        >
+                          <p>0.00 USD</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="balance__info-buttons balance__info-buttons2">
+                      <div
+                        class="modal__balance__button-container modal__balance__button-container1"
+                        id="button__apply"
+                      >
+                        <div
+                          class="modal__balance__button-shadow-bgc-correct modal__balance__button-shadow-bgc-correct"
+                        ></div>
+                        <div
+                          class="modal__balance__button-shadow modal__balance__button-shadow"
+                        ></div>
+                        <div
+                          class="modal__balance__button-shadow-bgc modal__balance__button-shadow-bgc1"
+                        ></div>
+                        <button
+                          id="modalButtonSign1"
+                          class="modal__balance__button-signin"
+                        >
+                          <div
+                            class="text__modal__balance__button text__modal__balance__button"
+                          >
+                            <img src="./assets/icon/up1.png" alt="" /> Пополнить
+                          </div>
+                        </button>
+                      </div>
+                      <div class="modal__balance__button__withdraw-container">
+                        <div
+                          class="modal__balance__button__withdraw-shadow-bgc-correct"
+                        ></div>
+                        <div
+                          class="modal__balance__button__withdraw-shadow"
+                        ></div>
+                        <div
+                          class="modal__balance__button__withdraw-shadow-bgc"
+                        ></div>
+                        <button
+                          id="modalButtonSign"
+                          class="modal__balance__button__withdraw-signin"
+                        >
+                          <div class="text__modal__balance__button">
+                            <img
+                              src="./assets/icon/Arrow 1 (Stroke).png"
+                              alt=""
+                              class="modal__balance__button__withdraw-img1"
+                            />
+                            Вывести
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="about__us__border"></div>
+    <div class="footer__wrapper">
+      <footer class="footer">
+        <div class="footer__header">
+          <div class="change__language">
+            <div class="change__language__title">Выберите язык</div>
+            <select class="language">
+              <option>RU</option>
+              <option>EN</option>
+            </select>
+          </div>
+          <div class="other__buttons">
+            <div class="footer__button">Турниры</div>
+            <div class="footer__button">Служба поддержки</div>
+            <div class="footer__button">Правила и условия</div>
+          </div>
+        </div>
+        <div class="select__language-footer">
+          <div>Выберите язык</div>
+          <select class="language language1">
+            <option>RU</option>
+            <option>EN</option>
+          </select>
+        </div>
+        <div class="rules">
+          <div class="conditions">
+            <div class="rules__title">Навигация</div>
+            <div>
+              <img src="./assets/img/levels/arrow_downRules.svg" alt="" />
+            </div>
+          </div>
+          <ul class="conditions__list">
+            <div class="footer__button">Турниры</div>
+            <div class="footer__button">Служба поддержки</div>
+            <div class="footer__button">Правила и условия</div>
+          </ul>
+        </div>
+        <div class="transactions-adaptive">
+          <img src="./assets/img/main/main/transactions/visa.png" alt="" />
+          <img
+            src="./assets/img/main/main/transactions/master_card.png"
+            alt=""
+          />
+          <img src="./assets/img/main/main/transactions/city_24.png" alt="" />
+          <img src="./assets/img/main/main/transactions/easy_pay.png" alt="" />
+          <img src="./assets/img/main/main/transactions/apple_pay.png" alt="" />
+        </div>
+        <div class="transactions">
+          <div class="transactions__title">Удобные транзакции</div>
+          <div class="transactions__list_img">
+            <img src="./assets/img/main/main/transactions/visa.png" alt="" />
+            <img
+              src="./assets/img/main/main/transactions/master_card.png"
+              alt=""
+            />
+            <img src="./assets/img/main/main/transactions/city_24.png" alt="" />
+            <img
+              src="./assets/img/main/main/transactions/easy_pay.png"
+              alt=""
+            />
+            <img
+              src="./assets/img/main/main/transactions/apple_pay.png"
+              alt=""
+            />
+            <img src="./assets/img/main/main/transactions/goo_pay.png" alt="" />
+          </div>
+        </div>
+        <div class="transactions__adaprtive"></div>
+
+        <div class="all_rigth_received">
+          <div>© 2021-2025 Rutor Casino. Все права защищены.</div>
+          <div>
+            Copyright © 2025 www.rutorcasino.com is owned and operated by IAMA
+            N.V., a company registered and established under the laws of
+            Curacao. Licence Holder - IAMA N.V., Julianaplein 22, Willemstad,
+            Curacao.
+          </div>
+          <div>
+            All payments with Paysafe are made via IAMA N.V. It is the players
+            sole responsibility to inquire about the existing laws and
+            regulations of the given jurisdiction for online gambling.
+          </div>
+        </div>
+
+        <div class="sponsors">
+          <a href="#"
+            ><img src="./assets/img/main/main/footer/gamCare.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="./assets/img/main/main/footer/gambing.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="./assets/img/main/main/footer/begameble.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="./assets/img/main/main/footer/21+png.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="./assets/img/main/main/footer/sslsecure.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="./assets/img/main/main/footer/dmcaprotected.png" alt=""
+          /></a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const Btn1 = document.querySelector(".conditions");
+      const navListFooter = document.querySelector(".conditions__list");
+      Btn1.addEventListener("click", () => {
+        if (navListFooter.classList.contains("active")) {
+          navListFooter.classList.remove("active");
+          Btn1.classList.remove("active");
+        } else {
+          navListFooter.classList.add("active");
+          Btn1.classList.add("active");
+        }
+      });
+    </script>
+  </body>
+</html>
