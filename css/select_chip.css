@@ -1,0 +1,11 @@
+.filter-tabs a:nth-of-type(2) {
+  border-bottom: 2px solid #e8b21d;
+  color: #fff;
+}
+
+.filter-tabs a:nth-of-type(2) svg path {
+  fill: #e8b21d;
+}
+.select_chip {
+  margin-bottom: 46px;
+}
